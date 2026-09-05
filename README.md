@@ -5,8 +5,8 @@
 ## Thành viên nhóm
 | Họ tên | MSSV | GitHub username | Phụ trách |
 |---|---|---|---|
-| [Điền tên] | [Điền MSSV] | [Điền username] | Recipes module |
-| [Điền tên] | [Điền MSSV] | [Điền username] | Planner & Shopping module |
+| Lê Trần Vũ Bảo | 077206008670 | vubao26 | Recipes module |
+| Thái Anh Quân | 044207010126 | HaritaNguyen | Planner & Shopping module |
 
 ## Kiến trúc
 - Mẫu kiến trúc: MVVM + Repository pattern
@@ -38,4 +38,4 @@
 - [ ] Export/share shopping list
 
 ## Video demo
-[Cập nhật link YouTube sau khi quay xong]
+
