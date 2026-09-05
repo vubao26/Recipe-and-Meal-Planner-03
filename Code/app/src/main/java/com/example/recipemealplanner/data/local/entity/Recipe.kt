@@ -9,8 +9,10 @@ data class Recipe(
     val id: Int = 0,
     val name: String,
     val category: String,
-    val ingredients: String,
     val instructions: String,
     val prepTimeMinutes: Int,
-    val servings: Int
+    val servings: Int,
+    val imageUri: String? = null,
+    val isFavorite: Boolean = false,
+    val lastViewedAt: Long? = null
 )

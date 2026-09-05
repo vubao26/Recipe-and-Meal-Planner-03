@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.RestaurantMenu
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -28,10 +29,13 @@ import com.example.recipemealplanner.ui.recipe.RecipeDetailScreen
 import com.example.recipemealplanner.ui.recipe.RecipeFormScreen
 import com.example.recipemealplanner.ui.recipe.RecipeListScreen
 import com.example.recipemealplanner.ui.recipe.RecipeViewModel
+import com.example.recipemealplanner.ui.shopping.ShoppingListScreen
+import com.example.recipemealplanner.ui.shopping.ShoppingViewModel
 
 private sealed class Destination(val route: String, val label: String) {
     data object RecipeList : Destination("recipe_list", "Recipes")
     data object MealPlanner : Destination("meal_planner", "Meal Planner")
+    data object Shopping : Destination("shopping_list", "Shopping")
 }
 
 @Composable
@@ -43,8 +47,11 @@ fun AppNavigation(app: RecipeMealPlannerApp) {
     val mealPlannerViewModel: MealPlannerViewModel = viewModel(
         factory = MealPlannerViewModel.Factory(app.mealPlanRepository, app.recipeRepository)
     )
+    val shoppingViewModel: ShoppingViewModel = viewModel(
+        factory = ShoppingViewModel.Factory(app.shoppingRepository)
+    )
 
-    val tabs = listOf(Destination.RecipeList, Destination.MealPlanner)
+    val tabs = listOf(Destination.RecipeList, Destination.MealPlanner, Destination.Shopping)
 
     Scaffold(
         bottomBar = {
@@ -67,8 +74,11 @@ fun AppNavigation(app: RecipeMealPlannerApp) {
                         },
                         icon = {
                             Icon(
-                                imageVector = if (tab is Destination.RecipeList)
-                                    Icons.Filled.RestaurantMenu else Icons.Filled.CalendarMonth,
+                                imageVector = when (tab) {
+                                    is Destination.RecipeList -> Icons.Filled.RestaurantMenu
+                                    is Destination.MealPlanner -> Icons.Filled.CalendarMonth
+                                    is Destination.Shopping -> Icons.Filled.ShoppingCart
+                                },
                                 contentDescription = tab.label
                             )
                         },
@@ -120,6 +130,9 @@ fun AppNavigation(app: RecipeMealPlannerApp) {
             }
             composable(Destination.MealPlanner.route) {
                 MealPlannerScreen(viewModel = mealPlannerViewModel)
+            }
+            composable(Destination.Shopping.route) {
+                ShoppingListScreen(viewModel = shoppingViewModel)
             }
         }
     }
