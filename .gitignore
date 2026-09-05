@@ -1,0 +1,40 @@
+# Built application files
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Java / Kotlin build class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+Code/app/build/
+Code/build/
+Code/*/build/
+
+# Gradle files
+.gradle/
+# NOTE: gradle/wrapper/gradle-wrapper.jar and gradle-wrapper.properties
+# must stay tracked (required by the assignment) — do not ignore gradle/wrapper/
+
+# Local configuration (contains machine-specific SDK path — never commit)
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Keystores (never commit signing keys)
+*.jks
+*.keystore
+
+# Log/OS files
+*.log
+Thumbs.db
