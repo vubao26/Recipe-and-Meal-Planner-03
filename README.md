@@ -29,12 +29,12 @@
 ## Tiến độ Basic Requirements
 - [x] Quản lý recipe (CRUD): tên, danh mục, nguyên liệu, cách làm, thời gian, khẩu phần
 - [ ] Ảnh cho recipe
-- [ ] Tìm kiếm & lọc theo nguyên liệu/danh mục
-- [ ] Scale nguyên liệu theo khẩu phần
+- [x] Tìm kiếm & lọc theo nguyên liệu/danh mục
+- [x] Scale nguyên liệu theo khẩu phần
 - [x] Lên kế hoạch bữa ăn theo tuần
-- [ ] Shopping list gộp từ meal plan
-- [ ] Đánh dấu nguyên liệu có sẵn (pantry)
-- [ ] Lưu công thức yêu thích & xem gần đây
+- [x] Shopping list gộp từ meal plan
+- [x] Đánh dấu nguyên liệu có sẵn (pantry)
+- [x] Lưu công thức yêu thích & xem gần đây
 - [ ] Export/share shopping list
 
 ## Video demo
