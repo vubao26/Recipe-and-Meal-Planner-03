@@ -1,3 +1,5 @@
+// Assignment by Thai Anh Quan
+
 package com.example.recipemealplanner.ui.mealplanner
 
 import androidx.lifecycle.ViewModel
