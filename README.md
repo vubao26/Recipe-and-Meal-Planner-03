@@ -35,7 +35,7 @@
 - [x] Shopping list gộp từ meal plan
 - [x] Đánh dấu nguyên liệu có sẵn (pantry)
 - [x] Lưu công thức yêu thích & xem gần đây
-- [ ] Export/share shopping list
+- [x] Export/share shopping list
 
 ## Video demo
 
