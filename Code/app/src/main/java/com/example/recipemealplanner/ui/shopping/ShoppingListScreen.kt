@@ -1,3 +1,5 @@
+// Assignment by Thai Anh Quan
+
 package com.example.recipemealplanner.ui.shopping
 
 import android.content.Intent
