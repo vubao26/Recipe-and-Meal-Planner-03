@@ -61,4 +61,3 @@ interface RecipeDao {
     @Query("UPDATE recipes SET isFavorite = :isFavorite WHERE id = :recipeId")
     suspend fun setFavorite(recipeId: Int, isFavorite: Boolean)
 }
---lê trần vũ bảo
